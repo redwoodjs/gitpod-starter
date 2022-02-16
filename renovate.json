@@ -7,9 +7,7 @@
         "minor",
         "patch"
       ],
-      "automerge": true,
-      "matchPackagePatterns": ["@redwoodjs"],
-      "rangeStrategy": "pin"
+      "automerge": true
     }
   ],
   "ignoreDeps": [
