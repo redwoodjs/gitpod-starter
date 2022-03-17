@@ -12,6 +12,12 @@
 
 ### Setup
 
+To start an ephemeral developer environment and see RedwoodJS in action, click the following button:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/redwoodjs/gitpod-starter).
+
+If you prefer to set the project up on your local computer, please continue with the following instructions.
+
 We use Yarn as our package manager. To get the dependencies installed, just do this in the root directory:
 
 ```terminal
