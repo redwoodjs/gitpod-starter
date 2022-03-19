@@ -6,7 +6,9 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: yarn install
+  - init: |
+      rm ./renovate.json
+      yarn install
     command: yarn redwood dev
 
 ports:
