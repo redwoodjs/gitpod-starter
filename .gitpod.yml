@@ -9,7 +9,7 @@ tasks:
   - init: |
       rm ./renovate.json
       yarn install
-    command: yarn redwood dev
+    command: yarn rw dev --fwd="--allowed-hosts localhost --allowed-hosts $(gp url 8910 | cut -c 9-) --client-web-socket-url=$(gp url 8910 | sed -e "s/https/wss/g")/ws"
 
 ports:
   - port: 5432
