@@ -9,7 +9,7 @@ tasks:
   - init: |
       rm ./renovate.json
       yarn install
-    command: yarn rw dev --fwd="--allowed-hosts localhost $(gp url 8910 | cut -c 9-) --client-web-socket-url=ws$(gp url 8910 | cut -c 5-)/ws"
+    command: yarn rw dev --fwd="--client-web-socket-url=ws$(gp url 8910 | cut -c 5-):443/ws"
 
 ports:
   - port: 5432
