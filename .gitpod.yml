@@ -9,7 +9,8 @@ tasks:
   - init: |
       rm ./renovate.json
       yarn install
-    command: yarn redwood dev
+    # Using Gitpod Local Companion? Change this to just `yarn rw dev`
+    command: yarn rw dev --fwd="--client-web-socket-url=ws$(gp url 8910 | cut -c 5-)/ws"
 
 ports:
   - port: 5432
