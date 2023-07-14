@@ -6,6 +6,7 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
+    "skipLibCheck": false,
     "baseUrl": "./",
     "rootDirs": [
       "./src",
@@ -23,7 +24,7 @@
       "../node_modules/@types",
       "./node_modules/@types"
     ],
-    "types": ["jest"],
+    "types": ["jest"]
   },
   "include": [
     "src",

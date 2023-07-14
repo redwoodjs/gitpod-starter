@@ -1,16 +1,14 @@
 # To learn about this file, please see https://www.gitpod.io/docs/references/gitpod-yml
 
-# NOTE: Use Gitod's PostgreSQL image once https://github.com/gitpod-io/workspace-images/issues/705 is fixed
-#image: gitpod/workspace-postgres
-image:
-  file: .gitpod.Dockerfile
+image: gitpod/workspace-postgres
 
 tasks:
   - init: |
       rm ./renovate.json
       yarn install
     # Using Gitpod Local Companion? Change this to just `yarn rw dev`
-    command: yarn rw dev --fwd="--client-web-socket-url=ws$(gp url 8910 | cut -c 5-)/ws"
+    # command: yarn rw dev --fwd="--client-web-socket-url=ws$(gp url 8910 | cut -c 5-)/ws"
+    command: yarn rw dev
 
 ports:
   - port: 5432
@@ -27,7 +25,7 @@ vscode:
   extensions:
     - "dbaeumer.vscode-eslint"
     - "eamodio.gitlens"
-    # - "ofhumanbondage.react-proptypes-intellisense" - Not published to Open VSX (yet)
+    - "ofhumanbondage.react-proptypes-intellisense"
     - "mgmcdermott.vscode-language-babel"
     - "wix.vscode-import-cost"
     - "pflannery.vscode-versionlens"
