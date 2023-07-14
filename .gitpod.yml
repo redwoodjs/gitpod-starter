@@ -1,3 +1,4 @@
+---
 # To learn about this file, please see https://www.gitpod.io/docs/references/gitpod-yml
 
 image: gitpod/workspace-postgres
@@ -7,8 +8,7 @@ tasks:
       rm ./renovate.json
       yarn install
     # Using Gitpod Local Companion? Change this to just `yarn rw dev`
-    # command: yarn rw dev --fwd="--client-web-socket-url=ws$(gp url 8910 | cut -c 5-)/ws"
-    command: yarn rw dev
+    command: yarn rw dev --fwd="--client-web-socket-url=ws$(gp url 8910 | cut -c 5-)/ws"
 
 ports:
   - port: 5432
@@ -25,10 +25,10 @@ vscode:
   extensions:
     - "dbaeumer.vscode-eslint"
     - "eamodio.gitlens"
-    - "ofhumanbondage.react-proptypes-intellisense"
     - "mgmcdermott.vscode-language-babel"
     - "wix.vscode-import-cost"
     - "pflannery.vscode-versionlens"
     - "editorconfig.editorconfig"
     - "prisma.prisma"
     - "graphql.vscode-graphql"
+    - "graphql.vscode-graphql-syntax"
